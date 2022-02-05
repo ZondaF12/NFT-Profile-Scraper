@@ -1,0 +1,45 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="main.js"></script>
+</head>
+
+<body class="h-full">
+  <div
+    class="flex w-full mt-40 mb-10 justify-center content-center items-center space-x-4"
+  >
+    <div class="flex flex-col space-y-6">
+      <h3 class="text-center">Listing NFTs for an ETH Address</h3>
+      <div class="flex flex-col space-y-2">
+        <button
+          onclick="loginWithEth()"
+          class="rounded bg-white border border-gray-400 hover:bg-gray-100 py-2 px-4 text-gray-600 hover:text-gray-700"
+        >
+          Login & Save ETH Address
+        </button>
+        <p id="userAddress" class="text-gray-600"></p>
+        <button
+          id="logoutButton"
+          onclick="logout()"
+          class="hidden text-blue-500 underline"
+        >
+          Logout
+        </button>
+      </div>
+      <button
+        onclick="getOpenseaItems()"
+        class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white"
+      >
+        Get OpenSea Assets
+      </button>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-center">
+    <div id="openseaItems" class="w-1/2 grid grid-cols-4 gap-2">
+      <!-- Opensea items go here -->
+    </div>
+  </div>
+</body>
